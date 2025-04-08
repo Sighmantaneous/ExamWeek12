@@ -1,6 +1,3 @@
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 public class Passenger{
 
    private String Title, Fname,Lname, ID ;
@@ -26,8 +23,9 @@ public class Passenger{
         return Title;
     }
 
-    public void setTitle(String title) {
+    public char setTitle(String title) {
         Title = title;
+        return 0;
     }
 
     public String getFname() {
