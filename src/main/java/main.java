@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class main {
 
-    public static void main(String[] args) {
+    public static void main (String[] args) throws IllegalArgumentException {
 
         String Title, Fname,Lname, ID ;
         int Age ;
@@ -13,7 +13,18 @@ public class main {
 
         System.out.println("Please enter Title");
         Title = sc.next();
-        myPassenger.setTitle(Title);
+
+        if(Title =="Mr"){
+            myPassenger.setTitle(Title);
+        }
+        if(Title =="Mrs"){
+            myPassenger.setTitle(Title);
+        }
+        if(Title =="Ms"){
+            myPassenger.setTitle(Title);
+        }
+        else throw new IllegalArgumentException("Must be Mr, Mrs, or Ms");
+
 
         sc.nextLine();
         System.out.println("Please enter First name ");
